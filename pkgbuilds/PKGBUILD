@@ -1,0 +1,24 @@
+# Maintainer: Ward Gauderis
+pkgname=includestodot
+pkgver=1
+pkgrel=1
+pkgdesc="Visualize and optimize the include structure of your C/C++ project."
+arch=('x86_64')
+url="https://github.com/WardGauderis/IncludesToDot.git"
+license=('GPL3')
+depends=('graphviz')
+makedepends=('cmake')
+source=("${pkgname}::git+$url")
+md5sums=('SKIP')
+
+build() {
+  	cd "${pkgname}"
+	cmake .
+	make
+}
+
+package() {
+  	cd "${pkgname}"
+	mkdir -p $pkgdir/usr/bin
+	install itd $pkgdir/usr/bin
+}
