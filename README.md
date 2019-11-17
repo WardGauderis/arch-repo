@@ -1,6 +1,6 @@
 # arch-repo
 
-Custom Pacman repository with non-official packages for Arch Linux.
+Custom Pacman repository with unofficial packages for Arch Linux.
 
 Installation:
 
